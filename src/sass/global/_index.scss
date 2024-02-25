@@ -1,0 +1,10 @@
+@forward 'function';
+@forward 'setting';
+@forward 'breakpoints';
+
+
+// @forward は引っ張ってきたデータをは他に引き渡すことができる。
+// 今回の場合、各ファイル（function,setting,breakpoints）から,
+// このindex.scssファイルに情報引いてきて、
+// @use "global" as *;（index.scss が最初に読み込まれる）を使って
+// moduleフォルダで使えるようにしている。
