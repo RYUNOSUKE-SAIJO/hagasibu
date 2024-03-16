@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.is-large {
+  font-size: myrem(58);
+}
+
+.is-indent {
+  text-indent: 4em;
+}

@@ -1,0 +1,191 @@
+@use "global" as *;
+
+.header {
+    height: myrem(62);
+    background-color: #fff;
+    @include mq("md") {
+        height: myrem(110);
+    }
+}
+
+.header__inner {
+    padding-left: myrem(14);
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    @include mq("md") {
+        padding-left: myrem(26);
+    }
+}
+
+.header__logo {
+    max-width: myrem(74);
+    width: 100%;
+    height: inherit;
+    @include mq("md") {
+        max-width: myrem(100);
+    }
+}
+
+.header__logo a {
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header__nav {
+    display: flex;
+    height: inherit;
+    width: 100%;
+}
+
+.header__nav-items {
+    display: none;
+    height: inherit;
+    @include mq('md') {
+      display: flex;
+      margin: 0 auto;
+    }
+}
+
+
+/* -- nav-item -- */
+
+.header__nav-item {
+    height: inherit;
+}
+
+.header__nav-item a {
+    padding: myrem(24) ;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    font-size: myrem(18);
+    font-weight: 500;
+    line-height: 1;
+    color: #333;
+    text-transform: uppercase;
+}
+
+
+/* -- nav-block -- */
+.header__nav-blocks {
+  display: flex;
+  height: inherit;
+  margin-left: auto;
+  @include mq('md') {
+    margin-left: 0;
+  }
+}
+
+.header__nav-block {
+  height: inherit;
+}
+
+.header__nav-block a {
+    padding: 0 myrem(10);
+    height: inherit;
+    color: #fff;
+    background-color: #D2CDDF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    font-size: myrem(12);
+    @include mq('md') {
+        padding: myrem(22);
+        gap: 20%;
+        font-size: myrem(18);
+    }
+}
+
+.header__nav-block.header__nav-block--menu {
+  display: block;
+  @include mq('md') {
+    display: none;
+  }
+}
+
+.header__nav-block.header__nav-block--access a {
+    color: $black;
+    background-color: #D2CDDF;
+
+}
+
+.header__nav-block.header__nav-block--contact a {
+    background-color: #8F86B1;
+    color: $black;
+
+}
+
+.header__nav-block.header__nav-block--menu a {
+    background-color: #4B4B8C;
+    color: $white;
+}
+
+.fa-2xl {
+  font-size: 1.5em;
+  @include mq('md') {
+    font-size: 2em;
+  }
+}
+
+
+/* -- ドロワーメニュー -- */
+.header__drawer {
+    padding: myrem(228) 0;
+    display: none;
+    position: absolute;
+    z-index: 900;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #13248C, $alpha: .95);
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.header__drawer::-webkit-scrollbar {
+    display:none;
+}
+
+.header__drawer-xmark {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.header__drawer-item a {
+    padding: myrem(36) 0;
+    display: block;
+    font-size: myrem(28);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header__drawer-item.header__drawer-item--contact a::after {
+    content: "";
+    margin-bottom: myrem(5);
+    margin-left: myrem(20);
+    width: myrem(15);
+    height: myrem(15);
+    display: inline-block;
+    background-image: url(./../images/common/contact-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

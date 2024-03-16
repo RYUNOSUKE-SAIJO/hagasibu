@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.background-title {
+
+}
+
+.background-title__text {
+    font-size: myrem(172);
+    color: #E4E7EF;
+    letter-spacing: 0.05em;
+    line-height : 1.5;
+    font-family: $main-font;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+

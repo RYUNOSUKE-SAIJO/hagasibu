@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-title__main {
+    font-size: myrem(36);
+    color: $black;
+    letter-spacing: 0.05em;
+    line-height : calc(63 /36);
+    font-family: $main-font;
+    font-weight: 500;
+}
+
+.section-title__sub {
+    font-size: myrem(24);
+    color: $black;
+    letter-spacing: 0.05em;
+    line-height : calc(42 /24);
+    font-family: $sub-title;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+

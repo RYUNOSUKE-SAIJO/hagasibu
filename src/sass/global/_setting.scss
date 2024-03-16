@@ -12,9 +12,10 @@ $padding-sp: 20px;
 ////////////////////
 // フォント設定
 ////////////////////
-
-$main-font:'';
-$second-font:'';
+$header-font: "kozuka-gothic-pr6n", 'Noto Serif JP';
+$mv-font: "kozuka-gothic-pr6n", 'Noto Serif JP';
+$main-font: 'Noto Serif JP', serif;
+$sub-title: "noto-sans-cjk-jp", 'Noto Serif JP';
 
 // フォントウェイト
 $regular: 300;

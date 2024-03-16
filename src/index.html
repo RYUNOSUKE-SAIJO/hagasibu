@@ -6,7 +6,7 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="robots" content="noindex" />
   <!-- meta情報 -->
-  <title>CodeUps</title>
+  <title>芳賀支部</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <!-- ogp -->
@@ -17,31 +17,181 @@
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
   <!-- ファビコン -->
-  <link rel="”icon”" href="" />
+  <link rel="icon" href="" />
   <!----- Google Font ----->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link href="./assets/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'wkj7yip',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://kit.fontawesome.com/66a0693602.js" crossorigin="anonymous"></script>
   <script defer src="./assets/js/script.js"></script>
+
 </head>
+
 <body>
   <div class="wrap">
-    <header>
 
-    </header>
-    <main>
-      <div class="inner">
-        <p class="test">変更のテスト</p>
+    <header class="header layout-header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#">
+            <img src="https://placehold.jp/3d4070/ffffff/214x80.jpg" alt="LOGO">
+          </a>
+        </h1>
+        <nav class="header__nav">
+          <ul class="header__nav-items">
+            <li class="header__nav-item">
+              <a href="#">トップページ</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">芳賀支部について</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">お知らせ</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">関連団体</a>
+            </li>
+          </ul>
+          <ul class="header__nav-blocks">
+            <li class="header__nav-block header__nav-block--access">
+              <a href="#" target="_blank" rel="noopener"><span><i class="fa-solid fa-location-dot fa-2xl"></i></span>アクセス</a>
+            </li>
+            <li class="header__nav-block header__nav-block--contact">
+              <a href="#" target="_blank" rel="noopener"><span><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i></span>お問合わせ</a>
+            </li>
+            <li class="header__nav-block header__nav-block--menu js-hamburger">
+              <a><span><i class="fa-solid fa-bars fa-xl"></i></span>メニュー</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__drawer js-drawer">
+          <div class="header__drawer-xmark js-hamburger">
+            <i class="fa-solid fa-xmark fa-2xl" style="color: #ffffff;"></i>
+          </div>
+          <nav class="header__drawer-nav">
+            <ul class="header__drawer-items">
+              <li class="header__drawer-item">
+                <a href="#">トップページ</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">芳賀支部について</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">お知らせ</a>
+              </li>
+              <li class="header__drawer-item">
+                <a href="#">関連団体</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
+    </header>
+
+    <main>
+
+      <section class="mv">
+        <div class="mv__inner">
+          <div class="mv__title-wrap">
+            <h2 class="mv__main-title">
+              <span class="is-large">暮</span>らしを守り<br>地域を<span class="is-large">支</span>える
+            </h2>
+          </div>
+          <div class="mv__swiper swiper js-mv-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-img">
+                  <picture>
+                    <source srcset="./assets/images/common/sp_mv.webp" media="(max-width: 768px)">
+                    <img src="./assets/images/common/pc_mv.webp" alt="メインビュー画像1">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-img">
+                  <img src="./assets/images/common/mv-dummy.webp" alt="メインビュー画像2">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="about__inner inner">
+          <div class="about__section-title section-title">
+            <h3 class="section-title__main">芳賀支部について</h3>
+            <p class="section-title__sub">about</p>
+          </div>
+          <div class="about__container">
+            <div class="about__content">
+              <p class="about__text">
+                当支部は、栃木県芳賀地区管内（真岡市、芳賀町、市貝町、茂木町、益子町）で、建設業を営む者で組織されています。
+                <br class="u-desktop">建設業に係わる調査研究、研修会、普及啓発活動等を通じて建設業の健全な発展を目指す一方、
+                <br class="u-desktop">社会インフラや環境整備など、地域の安全・安心な環境を支え、地域が頼れる存在となるよう日々活動しております。
+              </p>
+            </div>
+            <div class="about__link-container">
+              <a class="about__link" href="#">
+                <img class="about__link-img" src="./assets/images/common/pc_about01.webp" alt="aboutセクションの画像">
+                <div class="about__link-title-wrap">
+                  <p class="about__link-title">活動報告</p>
+                  <p class="about__link-sub-title">activity&nbsp;report</p>
+                </div>
+              </a>
+              <a class="about__link" href="#">
+                <img class="about__link-img" src="./assets/images/common/pc_about02.webp" alt="aboutセクションの画像">
+                <div class="about__link-title-wrap">
+                  <p class="about__link-title">役員・委員会</p>
+                  <p class="about__link-sub-title">executive</p>
+                </div>
+              </a>
+              <a class="about__link" href="#">
+                <img class="about__link-img" src="./assets/images/common/pc_about03.webp" alt="aboutセクションの画像">
+                <div class="about__link-title-wrap">
+                  <p class="about__link-title">会員名簿</p>
+                  <p class="about__link-sub-title">members'&nbsp;list</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer>
 
     </footer>
+
   </div>
 </body>
 
 </html>
+
+<!----- 共通パーツ ----->
+
+<!-- <div class="section-title">
+  <h3 class="section-title__main">お知らせ</h3>
+  <p class="section-title__sub">news</p>
+</div>
+
+<div class="background-title">
+  <p class="background-title__text">news</p>
+</div> -->
