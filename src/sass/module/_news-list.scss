@@ -1,0 +1,115 @@
+@use "global" as *;
+
+
+.news-list {
+    display: grid;
+    gap: myrem(30);
+    grid-template-columns: repeat(1, 1fr);
+    @include mq(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mq(md){
+        gap: myrem(40);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.news-list__item {
+  display: inline-block;
+  padding: myrem(0) myrem(15);
+  background-color: $white;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 myrem(40) 0 rgba(0, 0, 0, .05);
+  @include mq('md') {
+    padding: myrem(0) myrem(20);
+  }
+}
+
+.news-list__item-top {
+  padding-top: myrem(24);
+  padding-bottom: myrem(12);
+  @include mq('md') {
+    padding-top: myrem(32);
+    padding-bottom: myrem(24);
+  }
+}
+
+.news-list__item-category {
+  display: inline-block;
+  padding: myrem(10) myrem(20);
+  background-color: #305C91;
+  font-size: myrem(14);
+  color: $white;
+  letter-spacing: 0.05em;
+  font-family: $main-font;
+  font-weight: 400;
+}
+
+.news-list__item-title {
+  margin-top: myrem(16);
+  font-size: myrem(17);
+  color: $black;
+  letter-spacing: 0.05em;
+  font-family: $main-font;
+  font-weight: 500;
+}
+
+.news-list__item-date {
+  display: inline-block;
+  margin-top: myrem(16);
+  font-size: myrem(14);
+  color: $black;
+  letter-spacing: 0.05em;
+  font-family: $main-font;
+  font-weight: 300;
+}
+
+.news-list__item-date span {
+  margin-right: myrem(10);
+}
+
+.news-list__item-bar {
+  width: 100%;
+  height: myrem(1);
+  background-color: #828282;
+}
+
+.news-list__item-body {
+  padding-top: myrem(16);
+  padding-bottom: myrem(24);
+  @include mq('md') {
+    padding-top: myrem(26);
+    padding-bottom: myrem(32);
+  }
+}
+
+.news-list__item-text {
+  font-size: myrem(17);
+  color: $black;
+  letter-spacing: 0.05em;
+  font-family: $main-font;
+  font-weight: 300;
+}
+
+.news-list__item-btn {
+margin-top: myrem(16);
+@include mq('md') {
+  margin-top: myrem(22);
+}
+}
+
+.news-list__item-btn a {
+  padding: myrem(10) myrem(30);
+  background-color: #828282;
+  font-size: myrem(14);
+  color: $white;
+  letter-spacing: 0.05em;
+  line-height : calc(42 / 14);
+  font-family: $main-font;
+  font-weight: 400;
+  @include mq('md') {
+      padding: myrem(14) myrem(50);
+  }
+}
+

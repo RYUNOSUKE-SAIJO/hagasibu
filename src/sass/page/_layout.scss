@@ -1,9 +1,74 @@
 @use "global" as *;
 
 .layout-header {
-    position: fixed;
+    position: absolute;
     z-index: 900;
     top: 0;
     right: 0;
     left: 0;
+}
+
+.l-about {
+  position: relative;
+  margin-top: myrem(100);
+  padding-bottom: myrem(100);
+  @include mq('md') {
+    margin-top: myrem(120);
+    padding-bottom: myrem(120);
+  }
+}
+
+.l-news {
+  position: relative;
+  padding-top: myrem(100);
+  padding-bottom: myrem(100);
+  background-color: #E4E7EF;
+  @include mq('md') {
+    padding-top: myrem(120);
+    padding-bottom: myrem(120);
+  }
+}
+
+.l-relate {
+  position: relative;
+  margin-top: myrem(100);
+  padding-bottom: myrem(100);
+  @include mq('md') {
+    margin-top: myrem(120);
+    padding-bottom: myrem(120);
+  }
+}
+
+.l-access {
+  position: relative;
+  padding-top: myrem(100);
+  padding-bottom: myrem(100);
+  background-color: #E4E7EF;
+  @include mq('md') {
+    padding-top: myrem(120);
+    padding-bottom: myrem(120);
+  }
+}
+
+.l-footer {
+  position: relative;
+  padding-top: myrem(100);
+  background-color: #E4E7EF;
+  @include mq('md') {
+    padding-top: myrem(120);
+  }
+}
+
+.l-page-top {
+    position: fixed;
+    right: myrem(15);
+    bottom: myrem(15);
+    z-index: 99;
+  }
+
+  .l-members-only {
+    position: fixed;
+    left: myrem(15);
+    bottom: myrem(15);
+    z-index: 99;
 }

@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
   <!-- ファビコン -->
-  <link rel="icon" href="" />
+  <link rel="icon" href="#" />
   <!----- Google Font ----->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,7 +134,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="about l-about">
         <div class="about__inner inner">
           <div class="about__section-title section-title">
             <h3 class="section-title__main">芳賀支部について</h3>
@@ -144,13 +144,16 @@
             <div class="about__content">
               <p class="about__text">
                 当支部は、栃木県芳賀地区管内（真岡市、芳賀町、市貝町、茂木町、益子町）で、建設業を営む者で組織されています。
-                <br class="u-desktop">建設業に係わる調査研究、研修会、普及啓発活動等を通じて建設業の健全な発展を目指す一方、
+                <br>建設業に係わる調査研究、研修会、普及啓発活動等を通じて建設業の健全な発展を目指す一方、
                 <br class="u-desktop">社会インフラや環境整備など、地域の安全・安心な環境を支え、地域が頼れる存在となるよう日々活動しております。
               </p>
             </div>
             <div class="about__link-container">
               <a class="about__link" href="#">
-                <img class="about__link-img" src="./assets/images/common/pc_about01.webp" alt="aboutセクションの画像">
+                <picture>
+                  <source srcset="./assets/images/common/sp_about01.webp" media="(max-width: 768px)">
+                  <img class="about__link-img about__link-img-01" src="./assets/images/common/pc_about01.webp" alt="aboutセクションの画像">
+                </picture>
                 <div class="about__link-title-wrap">
                   <p class="about__link-title">活動報告</p>
                   <p class="about__link-sub-title">activity&nbsp;report</p>
@@ -173,12 +176,200 @@
             </div>
           </div>
         </div>
+        <div class="about__background-title background-title">
+          <p class="background-title__text">about</p>
+        </div>
       </section>
+
+      <section class="news l-news">
+        <div class="news__inner inner">
+          <!----- section-title ----->
+          <div class="news__section-title section-title">
+            <h3 class="section-title__main">お知らせ</h3>
+            <p class="section-title__sub">news</p>
+          </div>
+          <!----- news-list ----->
+          <ul class="news__list news-list">
+            <li class="news-list__item">
+              <div class="news-list__item-top">
+                <p class="news-list__item-category">カテゴリ名</p>
+                <p class="news-list__item-title">タイトルがここに入りますタイトルがここに入ります</p>
+                <time class="news-list__item-date" datetime="2024-03-19"><span><i class="fa-regular fa-calendar-days"></i></span>2024.03.19</time>
+              </div>
+              <div class="news-list__item-bar"></div>
+              <div class="news-list__item-body">
+                <p class="news-list__item-text">投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。（40～45字程度）</p>
+                <div class="news-list__item-btn">
+                  <a href="#">続きを読む</a>
+                </div>
+              </div>
+            </li>
+            <li class="news-list__item">
+              <div class="news-list__item-top">
+                <p class="news-list__item-category">カテゴリ名</p>
+                <p class="news-list__item-title">タイトルがここに入りますタイトルがここに入ります</p>
+                <time class="news-list__item-date" datetime="2024-03-19"><span><i class="fa-regular fa-calendar-days"></i></span>2024.03.19</time>
+              </div>
+              <div class="news-list__item-bar"></div>
+              <div class="news-list__item-body">
+                <p class="news-list__item-text">投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。（40～45字程度）</p>
+                <div class="news-list__item-btn">
+                  <a href="#">続きを読む</a>
+                </div>
+              </div>
+            </li>
+            <li class="news-list__item">
+              <div class="news-list__item-top">
+                <p class="news-list__item-category">カテゴリ名</p>
+                <p class="news-list__item-title">タイトルがここに入りますタイトルがここに入ります</p>
+                <time class="news-list__item-date" datetime="2024-03-19"><span><i class="fa-regular fa-calendar-days"></i></span>2024.03.19</time>
+              </div>
+              <div class="news-list__item-bar"></div>
+              <div class="news-list__item-body">
+                <p class="news-list__item-text">投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。（40～45字程度）</p>
+                <div class="news-list__item-btn">
+                  <a href="#">続きを読む</a>
+                </div>
+              </div>
+            </li>
+            <li class="news-list__item">
+              <div class="news-list__item-top">
+                <p class="news-list__item-category">カテゴリ名</p>
+                <p class="news-list__item-title">タイトルがここに入りますタイトルがここに入ります</p>
+                <time class="news-list__item-date" datetime="2024-03-19"><span><i class="fa-regular fa-calendar-days"></i></span>2024.03.19</time>
+              </div>
+              <div class="news-list__item-bar"></div>
+              <div class="news-list__item-body">
+                <p class="news-list__item-text">投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。（40～45字程度）</p>
+                <div class="news-list__item-btn">
+                  <a href="#">続きを読む</a>
+                </div>
+              </div>
+            </li>
+            <li class="news-list__item">
+              <div class="news-list__item-top">
+                <p class="news-list__item-category">カテゴリ名</p>
+                <p class="news-list__item-title">タイトルがここに入りますタイトルがここに入ります</p>
+                <time class="news-list__item-date" datetime="2024-03-19"><span><i class="fa-regular fa-calendar-days"></i></span>2024.03.19</time>
+              </div>
+              <div class="news-list__item-bar"></div>
+              <div class="news-list__item-body">
+                <p class="news-list__item-text">投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。（40～45字程度）</p>
+                <div class="news-list__item-btn">
+                  <a href="#">続きを読む</a>
+                </div>
+              </div>
+            </li>
+            <li class="news-list__item">
+              <div class="news-list__item-top">
+                <p class="news-list__item-category">カテゴリ名</p>
+                <p class="news-list__item-title">タイトルがここに入りますタイトルがここに入ります</p>
+                <time class="news-list__item-date" datetime="2024-03-19"><span><i class="fa-regular fa-calendar-days"></i></span>2024.03.19</time>
+              </div>
+              <div class="news-list__item-bar"></div>
+              <div class="news-list__item-body">
+                <p class="news-list__item-text">投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。投稿の抜粋文がここに表示されます。（40～45字程度）</p>
+                <div class="news-list__item-btn">
+                  <a href="#">続きを読む</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="news__btn">
+            <a href="#">すべてのお知らせを確認する</a>
+          </div>
+        </div>
+        <div class="news__background-title background-title">
+          <p class="background-title__text">news</p>
+        </div>
+      </section>
+
+      <section class="relate l-relate">
+        <div class="relate__inner inner">
+          <div class="relate__section-title section-title">
+            <h3 class="section-title__main">関連団体</h3>
+            <p class="section-title__sub">relate&nbsp;organizations</p>
+          </div>
+          <!-- swiper -->
+          <div class="relate__swiper-container swiper-container">
+            <div class="relate__swiper swiper js-relate-swiper">
+              <div class="swiper-wrapper">
+                <!-- img -->
+                <div class="swiper-slide"><img src="https://placehold.jp/3d4070/ffffff/368x104.jpg" alt="Image 1"></div>
+                <div class="swiper-slide"><img src="https://placehold.jp/3d4070/ffffff/368x104.jpg" alt="Image 2"></div>
+                <div class="swiper-slide"><img src="https://placehold.jp/3d4070/ffffff/368x104.jpg" alt="Image 3"></div>
+              </div>
+              <!----- btn ----->
+              <div class="swiper-button-prev"><i class="fa-solid fa-caret-left fa-2xl" style="color: #727272;"></i></div>
+              <div class="swiper-button-next"><i class="fa-solid fa-caret-right fa-2xl" style="color: #727272;"></i></div>
+              <!-- pagination -->
+              <div class="relate__swiper-pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="relate__background-title background-title">
+          <p class="background-title__text">relate</p>
+        </div> -->
+      </section>
+
+      <section class="access l-access">
+        <div class="access__inner inner">
+          <div class="access__section-title section-title">
+            <h3 class="section-title__main">アクセス</h3>
+            <p class="section-title__sub">access</p>
+          </div>
+          <div class="access__container">
+            <div class="access__iframe-wrap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3209.917953370093!2d140.0148871758835!3d36.43536658818024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f57e2eab68381%3A0xd7febf0d05626fde!2z44CSMzIxLTQzMjUg5qCD5pyo55yM55yf5bKh5biC55Sw55S677yR77yV77yR77yQ4oiS77yT!5e0!3m2!1sja!2sjp!4v1710825537836!5m2!1sja!2sjp"
+                width="904" height="462" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="access__info">
+              <p class="access__address">〒321-4325<br>栃木県真岡市田町1510-3</p>
+              <div class="access__number-wrap">
+                <p class="access__phone-number">TEL：0285-82-2051</p>
+                <p class="access__fax-number">FAX：0285-82-2980</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="access__background-title background-title">
+          <p class="background-title__text">access</p>
+        </div>
+      </section>
+
     </main>
 
-    <footer>
-
+    <footer class="footer l-footer">
+      <div class="footer__inner">
+        <div class="footer__wrap">
+          <nav class="footer__nav">
+            <ul class="footer__nav-items">
+              <li class="footer__nav-item">
+                <a href="#">アクセス</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">お問合わせ</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">サイトマップ</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">プライバシーポリシー</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">会員専用ページ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <small class="footer__copyright">&copy;&nbsp;一般社団法人栃木県建設業協会芳賀支部</small>
+      </div>
     </footer>
+
+    <div class="l-page-top page-top js-page-top"><i class="fa-solid fa-angle-up fa-2xl" style="color: #ffffff;"></i></div>
+    <div class="l-members-only members-only js-members-only"><a href="#"><i class="fa-solid fa-key fa-2xl" style="color: #ffffff;"></i>会員専用ページ</a></div>
 
   </div>
 </body>

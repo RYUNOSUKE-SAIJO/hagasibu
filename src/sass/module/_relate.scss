@@ -1,0 +1,110 @@
+@use "global" as *;
+
+.relate {
+
+}
+
+.relate__inner {
+
+}
+
+.relate__section-title {
+
+}
+
+.relate__swiper-container {
+  margin-top: myrem(40);
+  @include mq('md') {
+    margin-top: myrem(90);
+  }
+}
+
+/* -- swiper -- */
+
+.swiper-container {
+
+}
+
+.relate__swiper .swiper-wrapper .swiper-slide {
+  flex-shrink: 0;
+  max-width:32%;
+  max-width: myrem(368);
+  @include mq('md') {
+    flex-shrink: 1;
+  }
+}
+
+.relate__swiper .swiper-wrapper .swiper-slide img {
+  height: auto;
+  aspect-ratio: 368 / 104;
+  object-fit: cover;
+  width: 100%;
+}
+
+.relate__swiper .swiper-wrapper {
+  @include mq('md') {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
+}
+
+.swiper-slide {
+
+}
+
+/* -- ボタン -- */
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - (myrem(400) / 2 )),-50%);
+  @include mq('md') {
+    display: none;
+  }
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + (myrem(400) / 2 )),-50%);
+  @include mq('md') {
+    display: none;
+  }
+}
+
+/* -- ページネーション -- */
+.relate__swiper.swiper {
+  padding-bottom: myrem(50);
+}
+
+.relate__swiper-pagination.swiper-pagination.swiper-pagination-clickable {
+  @include mq('md') {
+    display: none ;
+  }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  margin: myrem(20) auto 0;
+  text-align: center;
+}
+
+/* ページネーションの余白 */
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-left: myrem(16);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #727272;
+}
+
+
+
+
+.relate__background-title {
+
+}
+
+

@@ -1,45 +1,44 @@
 
 jQuery(function ($) {
-
   /* ===============================================
   # ヘッダー
   =============================================== */
 
-    // ハンバーガーメニュー
-    $(function () {
-      $(".js-hamburger").on("click", function () {
-        $(this).toggleClass("is-open");
-        if ($(this).hasClass("is-open")) {
-          openDrawer();
-        } else {
-          closeDrawer();
-        }
-      });
-
-      // backgroundまたはページ内リンクをクリックで閉じる
-      $(".js-drawer a[href]").on("click", function () {
+  // ハンバーガーメニュー
+  $(function () {
+    $(".js-hamburger").on("click", function () {
+      $(this).toggleClass("is-open");
+      if ($(this).hasClass("is-open")) {
+        openDrawer();
+      } else {
         closeDrawer();
-      });
-
-      // resizeイベント
-      $(window).on("resize", function () {
-        if (window.matchMedia("(min-width: 768px)").matches) {
-          closeDrawer();
-        }
-      });
+      }
     });
 
-    function openDrawer() {
-      $(".js-drawer").fadeIn();
-      $(".js-hamburger").addClass("is-open");
-    }
+    // backgroundまたはページ内リンクをクリックで閉じる
+    $(".js-drawer a[href]").on("click", function () {
+      closeDrawer();
+    });
 
-    function closeDrawer() {
-      $(".js-drawer").fadeOut();
-      $(".js-hamburger").removeClass("is-open");
-    }
+    // resizeイベント
+    $(window).on("resize", function () {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        closeDrawer();
+      }
+    });
+  });
 
-/* ===============================================
+  function openDrawer() {
+    $(".js-drawer").fadeIn();
+    $(".js-hamburger").addClass("is-open");
+  }
+
+  function closeDrawer() {
+    $(".js-drawer").fadeOut();
+    $(".js-hamburger").removeClass("is-open");
+  }
+
+  /* ===============================================
 # メインビュースワイパー
 =============================================== */
   const mv_swiper = new Swiper(".js-mv-swiper", {
@@ -55,7 +54,121 @@ jQuery(function ($) {
     },
   });
 
+  /* ===============================================
+  # 関連団体 Swiper
+  =============================================== */
+
+  // Corrected: Removed the dot before the class name
+  const swiperSlides = document.getElementsByClassName("swiper-slide");
+  const breakPoint = 768;
+  let mySwiper;
+  let mySwiperBool = false; // Initialized with false
+
+  window.addEventListener(
+    "load",
+    () => {
+      if (window.innerWidth < breakPoint) {
+        createSwiper();
+        mySwiperBool = true;
+      }
+    },
+    false
+  );
+
+  window.addEventListener(
+    "resize",
+    () => {
+      if (window.innerWidth >= breakPoint && mySwiperBool) {
+        mySwiper.destroy(true, true); // Ensure proper destruction
+        mySwiper = undefined; // Clear the reference to the destroyed instance
+        mySwiperBool = false;
+      } else if (window.innerWidth < breakPoint && !mySwiperBool) {
+        createSwiper();
+        mySwiperBool = true;
+      }
+    },
+    false
+  );
+
+  const createSwiper = () => {
+    mySwiper = new Swiper(".js-relate-swiper", {
+      slideToClickedSlide: true,
+      spaceBetween: 40,
+      slidesPerView: "auto",
+      loop: true,
+      loopedSlides: swiperSlides.length, // Assumes swiperSlides is correctly defined earlier
+      centeredSlides: true,
+      // ページネーションの設定
+      pagination: {
+        el: ".swiper-pagination", // ここにページネーションのクラス名またはセレクタを指定
+        clickable: true, // ユーザーがページネーションのドットをクリックしてスライドを切り替えられるようにします
+      },
+      // ナビゲーションボタン（前へ、次へボタン）の設定
+      navigation: {
+        nextEl: ".swiper-button-next", // 「次へ」ボタンのクラス名またはセレクタを指定
+        prevEl: ".swiper-button-prev", // 「前へ」ボタンのクラス名またはセレクタを指定
+      },
+    });
+  };
+
+  /* ===============================================
+  # トップページへ
+  =============================================== */
+
+  $(window).on("scroll", function () {
+    let scrollHeight = $(document).height();
+    let scrollPosition = $(window).height() + $(window).scrollTop();
+    let footHeight = $("footer").innerHeight();
+    if (scrollHeight - scrollPosition <= footHeight) {
+      $(".js-page-top").css({
+        position: "absolute",
+        bottom: footHeight + 19,
+      });
+    } else {
+      $(".js-page-top").css({
+        position: "fixed",
+        bottom: "16px",
+      });
+      9;
+    }
+
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+    return false;
+  });
+
+  let topBtn = $(".js-page-top");
+  topBtn.hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      topBtn.fadeIn();
+    } else {
+      topBtn.fadeOut();
+    }
+  });
+
+
+  /* ===============================================
+  # members-only
+  =============================================== */
+
+  let membersOnly = $(".js-members-only");
+  membersOnly.hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      membersOnly.fadeIn();
+    } else {
+      membersOnly.fadeOut();
+    }
+  });
 
 
 
+
+
+// 終了タグ
 });

@@ -1,0 +1,60 @@
+@use "global" as *;
+
+
+.news {
+
+}
+
+.news__inner {
+
+}
+
+.news__section-title {
+  
+}
+
+.news__list {
+  margin-top: myrem(35);
+  @include mq('md') {
+    margin-top: myrem(80);
+  }
+}
+
+.news__btn {
+  text-align: center;
+  margin-top: myrem(50);
+  position: relative;
+  z-index: 2;
+  @include mq('md') {
+    margin-top: myrem(100);
+  }
+}
+
+.news__btn a {
+  display: inline-block;
+  padding: myrem(20) myrem(50);
+  background-color: #2D3860;
+  font-size: myrem(20);
+  color: $white;
+  letter-spacing: 0.05em;
+  font-family: $main-font;
+  font-weight: 400;
+  @include mq('md') {
+    padding: myrem(30) myrem(80);
+  }
+}
+
+.news__background-title.background-title {
+    bottom: myrem(-24);
+    right: myrem(20);
+    z-index: 1;
+    @include mq('md') {
+      bottom: myrem(-36);
+      right: myrem(20);
+    }
+}
+
+.news__background-title > .background-title__text {
+    color: $white;
+}
+

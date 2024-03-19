@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.page-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: myrem(71);
+    height: myrem(71);
+    font-size: myrem(15);
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #2D3860;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.page-top:hover {
+  opacity: 0.7;
+}
+
+.fa-solid.fa-angle-up {
+  font-size: myrem(36);
+}

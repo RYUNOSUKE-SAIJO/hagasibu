@@ -1,0 +1,124 @@
+@use "global" as *;
+
+.access {
+
+}
+
+.access__inner {
+
+}
+
+
+.access__section-title {
+
+}
+
+.access__container {
+  margin-top: myrem(40);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: myrem(36);
+  @include mq('md') {
+    flex-direction: row;
+    margin-top: myrem(94);
+    justify-content: flex-end;
+  }
+}
+
+.access__iframe-wrap {
+  padding-top: calc(100% * (462 / 904));
+  position: relative;
+  margin-left: calc(50% - 50vw);
+	width: 100vw;
+  max-width: myrem(904);
+  z-index: 2;
+}
+
+.access__iframe-wrap > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.access__info {
+  text-align: center;
+  width: 100%;
+  @include mq('md') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 40%;
+    margin-left: myrem(20);
+  }
+}
+
+.access__number-wrap {
+  margin-top: myrem(46);
+  display: flex;
+  justify-content: center;
+  gap: myrem(10);
+  flex-direction: column;
+  @include mq('sm') {
+    flex-direction: row;
+  }
+  @include mq('md') {
+    margin-top: myrem(55);
+    flex-direction: column;
+  }
+}
+
+.access__address {
+  font-size: myrem(20);
+  color: $black;
+  letter-spacing: 0.05em;
+  font-family: $main-font;
+  font-weight: 300;
+  text-decoration:underline;
+  @include mq('md') {
+    font-size: myrem(24);
+  }
+}
+
+.access__phone-number {
+  font-size: myrem(20);
+  color: $black;
+  letter-spacing: 0.05em;
+  font-family: $main-font;
+  font-weight: 300;
+  text-decoration:underline;
+  @include mq('md') {
+    font-size: myrem(24);
+  }
+}
+
+.access__fax-number {
+  font-size: myrem(20);
+  color: $black;
+  letter-spacing: 0.05em;
+  font-family: $main-font;
+  font-weight: 300;
+  text-decoration:underline;
+  @include mq('md') {
+    font-size: myrem(24);
+  }
+}
+
+.access__background-title.background-title {
+    bottom: myrem(-24);
+    left: myrem(20);
+    z-index: 1;
+    @include mq('md') {
+      bottom: myrem(-36);
+      left: myrem(20);
+    }
+}
+
+.access__background-title > .background-title__text {
+    color: $white;
+}
+

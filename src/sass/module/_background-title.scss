@@ -1,16 +1,19 @@
 @use "global" as *;
 
 .background-title {
-
+    position: absolute;
 }
 
 .background-title__text {
-    font-size: myrem(172);
+    font-size: myrem(80);
     color: #E4E7EF;
     letter-spacing: 0.05em;
     line-height : 1.5;
     font-family: $main-font;
     font-weight: 600;
     text-transform: uppercase;
+    @include mq('md') {
+        font-size: myrem(172);
+    }
 }
 

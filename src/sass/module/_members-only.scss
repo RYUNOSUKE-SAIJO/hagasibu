@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.members-only a {
+    display: flex;
+    gap: myrem(16);
+    justify-content: center;
+    align-items: center;
+    padding: myrem(28) myrem(34);
+    font-size: myrem(15);
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #2D3860;
+    cursor: pointer;
+}
+
+
+.fa-solid.fa-key {
+  font-size: myrem(30);
+}
