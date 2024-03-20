@@ -55,8 +55,8 @@
     right: myrem(20);
     z-index: 1;
     @include mq('md') {
-      bottom: myrem(-36);
-      right: myrem(20);
+      bottom: myrem(-50);
+      right: calc(50% - min(48vw,myrem(750)));
     }
 }
 
