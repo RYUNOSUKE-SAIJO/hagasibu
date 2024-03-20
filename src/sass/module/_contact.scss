@@ -15,7 +15,7 @@
   margin-top: myrem(36);
   margin-left: auto;
   margin-right: auto;
-  padding: myrem(10);
+  padding: 0 myrem(10) myrem(10) myrem(10);
   border: myrem(1) solid #edf3ff;
   @include mq('md') {
     margin-top: myrem(80);

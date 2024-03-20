@@ -49,8 +49,8 @@
     display: none;
     height: inherit;
     @include mq('md') {
-      display: flex;
-      margin: 0 auto;
+        display: flex;
+        margin: 0 auto;
     }
 }
 
@@ -76,16 +76,16 @@
 
 /* -- nav-block -- */
 .header__nav-blocks {
-  display: flex;
-  height: inherit;
-  margin-left: auto;
-  @include mq('md') {
-    margin-left: 0;
-  }
+    display: flex;
+    height: inherit;
+    margin-left: auto;
+    @include mq('md') {
+        margin-left: 0;
+    }
 }
 
 .header__nav-block {
-  height: inherit;
+    height: inherit;
 }
 
 .header__nav-block a {
@@ -107,10 +107,10 @@
 }
 
 .header__nav-block.header__nav-block--menu {
-  display: block;
-  @include mq('md') {
-    display: none;
-  }
+    display: block;
+    @include mq('md') {
+        display: none;
+    }
 }
 
 .header__nav-block.header__nav-block--access a {
@@ -161,8 +161,8 @@
 
 .header__drawer-xmark {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: myrem(20);
+    top: myrem(20);
 }
 
 .header__drawer-item a {
