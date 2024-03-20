@@ -52,11 +52,7 @@
 
 .l-footer {
   position: relative;
-  padding-top: myrem(100);
   background-color: #E4E7EF;
-  @include mq('md') {
-    padding-top: myrem(120);
-  }
 }
 
 .l-page-top {
@@ -71,4 +67,14 @@
     left: myrem(15);
     bottom: myrem(15);
     z-index: 99;
+}
+
+.l-contact {
+  position: relative;
+  margin-top: myrem(100);
+  padding-bottom: myrem(200);
+  @include mq('md') {
+    margin-top: myrem(120);
+    padding-bottom: myrem(230);
+  }
 }

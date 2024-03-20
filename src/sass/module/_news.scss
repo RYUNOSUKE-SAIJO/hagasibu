@@ -32,7 +32,7 @@
 
 .news__btn a {
   display: inline-block;
-  padding: myrem(20) myrem(50);
+  padding: myrem(20) myrem(30);
   background-color: #2D3860;
   font-size: myrem(20);
   color: $white;
@@ -42,6 +42,12 @@
   @include mq('md') {
     padding: myrem(30) myrem(80);
   }
+}
+
+.news__btn a:hover {
+  background-color: $white;
+  color: #2D3860;
+  border: 1px solid #2D3860;
 }
 
 .news__background-title.background-title {

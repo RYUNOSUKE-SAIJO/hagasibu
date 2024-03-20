@@ -4,21 +4,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: myrem(71);
-    height: myrem(71);
+    width: myrem(43);
+    height: myrem(43);
     font-size: myrem(15);
     line-height: 1;
     color: #fff;
     text-transform: uppercase;
     background-color: #2D3860;
-    transition: all 0.3s ease 0s;
     cursor: pointer;
+    @include mq('md') {
+      width: myrem(72);
+      height: myrem(72);
+    }
+}
+
+.page-top:hover .fa-angle-up::before {
+  color: #2D3860;
+  transition: all 0.3s ease 0s;
 }
 
 .page-top:hover {
-  opacity: 0.7;
+  background-color: $white;
+  transition: all 0.3s ease 0s;
+  border: 1px solid #2D3860;
 }
 
 .fa-solid.fa-angle-up {
-  font-size: myrem(36);
+  font-size: myrem(20);
+  @include mq('md') {
+    font-size: myrem(36);
+  }
 }

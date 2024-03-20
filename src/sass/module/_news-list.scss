@@ -109,7 +109,13 @@ margin-top: myrem(16);
   font-family: $main-font;
   font-weight: 400;
   @include mq('md') {
-      padding: myrem(14) myrem(50);
+    padding: myrem(14) myrem(50);
   }
 }
 
+
+.news-list__item-btn a:hover {
+  background-color: $white;
+  color: #828282;
+  border: 1px solid #828282;
+}

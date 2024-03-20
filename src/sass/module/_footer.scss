@@ -9,7 +9,10 @@
 }
 
 .footer__wrap {
-
+  padding-block: myrem(20);
+  @include mq('md') {
+    padding-block: myrem(40);
+  }
 }
 
 .footer__nav {
@@ -86,7 +89,6 @@ grid-row-gap: myrem(14);
   align-items: center;
   text-align: center;
   height: myrem(68);
-  margin-top: myrem(20);
   width: 100%;
   padding: myrem(24) myrem(10);
   background-color: #2C4A8C;
@@ -97,7 +99,6 @@ grid-row-gap: myrem(14);
   font-weight: 300;
   @include mq('md') {
     font-size: myrem(18);
-
   }
 }
 

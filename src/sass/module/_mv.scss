@@ -34,6 +34,7 @@
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     text-indent: -9.2em;
+    font-weight: 300;
     @include mq(md){
         font-size: myrem(38);
     }

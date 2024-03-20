@@ -78,7 +78,6 @@
   letter-spacing: 0.05em;
   font-family: $main-font;
   font-weight: 300;
-  text-decoration:underline;
   @include mq('md') {
     font-size: myrem(24);
   }
@@ -90,7 +89,6 @@
   letter-spacing: 0.05em;
   font-family: $main-font;
   font-weight: 300;
-  text-decoration:underline;
   @include mq('md') {
     font-size: myrem(24);
   }
@@ -102,7 +100,6 @@
   letter-spacing: 0.05em;
   font-family: $main-font;
   font-weight: 300;
-  text-decoration:underline;
   @include mq('md') {
     font-size: myrem(24);
   }

@@ -2,19 +2,45 @@
 
 .members-only a {
     display: flex;
-    gap: myrem(16);
+    gap: myrem(8);
     justify-content: center;
     align-items: center;
-    padding: myrem(28) myrem(34);
+    padding: myrem(14) myrem(17);
     font-size: myrem(15);
     line-height: 1;
     color: #fff;
     text-transform: uppercase;
     background-color: #2D3860;
     cursor: pointer;
+    @include mq('md') {
+      gap: myrem(16);
+      padding: myrem(28) myrem(34);
+    }
+}
+
+.members-only a:hover .fa-key::before {
+  color: #2D3860;
+  transition: all 0.3s ease 0s;
+}
+
+.members-only a:hover {
+  background-color: #fff;
+  border: 1px solid #2D3860;
+  color: #2D3860;
+  transition: all 0.3s ease 0s;
 }
 
 
 .fa-solid.fa-key {
-  font-size: myrem(30);
+  font-size: myrem(16);
+  @include mq('md') {
+    font-size: myrem(30);
+  }
+}
+
+.fa-solid.fa-key {
+  font-size: myrem(16);
+  @include mq('md') {
+    font-size: myrem(30);
+  }
 }
